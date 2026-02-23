@@ -912,14 +912,18 @@ main {
   }
 
   .features {
-    margin-top: 1.3rem;
+    margin-top: 2rem;
     padding: 2.7rem 0 3.4rem;
   }
 
   .features-intro {
     width: calc(100% - 1.2rem);
     margin-bottom: 1.55rem;
-    text-align: left;
+    text-align: center;
+  }
+
+  .features-intro h2 {
+    font-size: clamp(1.45rem, 6.2vw, 1.9rem);
   }
 
   .feature-grid {
