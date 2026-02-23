@@ -48,6 +48,111 @@
         <img class="shot shot-2" src="assets/screenshot2.png" alt="">
       </div>
     </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <div class="features-intro">
+        <h2 id="features-title">Everything you need to live your dreams</h2>
+        <p>Track progress, save memories, and celebrate each milestone as you turn ideas into real experiences.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card-light">
+          <div class="feature-visual">
+            <img src="assets/feature1.png" alt="Travel passport showing countries visited and travel stats">
+          </div>
+          <div class="feature-copy">
+            <p class="feature-eyebrow">Travel Passport</p>
+            <h3>Track Countries You Have Visited</h3>
+            <p>Use your travel passport to track countries you have visited and instantly see your travel stats.</p>
+          </div>
+        </article>
+
+        <article class="feature-card feature-card-dark">
+          <div class="feature-copy">
+            <p class="feature-eyebrow">Memories</p>
+            <h3>Create Memories for Completed Dreams</h3>
+            <p>Build a detailed timeline with your own photos so you can relive every completed dream whenever you want.</p>
+          </div>
+          <div class="feature-visual">
+            <img src="assets/feature2.png" alt="Memories timeline with completed dreams and photos">
+          </div>
+        </article>
+
+        <article class="feature-card feature-card-dark">
+          <div class="feature-copy">
+            <p class="feature-eyebrow">Journal</p>
+            <h3>Document Every Step of Your Journey</h3>
+            <p>Capture reflections, progress updates, and meaningful moments with journal entries as your dreams unfold.</p>
+          </div>
+          <div class="feature-visual">
+            <img src="assets/feature3.png" alt="Journal screen used to document the dream journey">
+          </div>
+        </article>
+
+        <article class="feature-card feature-card-light">
+          <div class="feature-visual">
+            <img src="assets/feature4.png" alt="Task planner breaking big dreams into smaller steps">
+          </div>
+          <div class="feature-copy">
+            <p class="feature-eyebrow">Tasks</p>
+            <h3>Break Big Dreams into Smaller Tasks</h3>
+            <p>Turn large goals into simple, actionable tasks so planning and progress feel manageable from day one.</p>
+          </div>
+        </article>
+
+        <article class="feature-card feature-card-light">
+          <div class="feature-visual">
+            <img src="assets/feature5.png" alt="Collection of custom country stamps for visited places">
+          </div>
+          <div class="feature-copy">
+            <p class="feature-eyebrow">Country Stamps</p>
+            <h3>Collect Custom Stamps from Every Country</h3>
+            <p>Unlock custom-made country stamps each time you visit a new place and grow a unique travel collection.</p>
+          </div>
+        </article>
+
+        <article class="feature-card feature-card-dark">
+          <div class="feature-copy">
+            <p class="feature-eyebrow">Dream Lists</p>
+            <h3>Organise Dreams into Smart Lists</h3>
+            <p>Group your dreams into custom lists so you can keep everything sorted by theme, trip, or life goal.</p>
+          </div>
+          <div class="feature-visual">
+            <img src="assets/feature6.png" alt="Organized dream lists grouped by categories">
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <script>
+    (() => {
+      const cards = Array.from(document.querySelectorAll(".feature-card"));
+      if (cards.length === 0) return;
+
+      cards.forEach((card, index) => {
+        card.style.setProperty("--reveal-delay", `${index * 70}ms`);
+      });
+
+      if (!("IntersectionObserver" in window)) {
+        cards.forEach((card) => card.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("is-visible", entry.isIntersecting);
+          });
+        },
+        {
+          threshold: 0.28,
+          rootMargin: "0px 0px -8% 0px"
+        }
+      );
+
+      cards.forEach((card) => observer.observe(card));
+    })();
+  </script>
 </body>
 </html>
