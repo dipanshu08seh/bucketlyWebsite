@@ -1,0 +1,82 @@
+:root {
+  --bg: #f5f6f8;
+  --text: #14171f;
+  --surface: #ffffff;
+  --stroke: #d9dce4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% -10%, #dbe5ff 0%, transparent 42%),
+    radial-gradient(circle at 85% -10%, #d4f9f1 0%, transparent 45%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+.site-header {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 1rem auto 0;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--stroke);
+  background-color: color-mix(in oklab, var(--surface) 88%, transparent);
+  border-radius: 18px;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-logo-image {
+  width: 2.25rem;
+  height: 2.25rem;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  display: block;
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  letter-spacing: 0.01em;
+}
+
+.app-store-link {
+  display: inline-flex;
+  line-height: 0;
+}
+
+.app-store-link img {
+  width: auto;
+  height: clamp(3.0rem, 5.0vw, 3.0rem);
+  display: block;
+}
+
+@media (max-width: 520px) {
+  .site-header {
+    width: calc(100% - 1.2rem);
+    margin-top: 0.6rem;
+    padding: 0.72rem 0.82rem;
+  }
+
+  .brand-logo-image {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+  }
+}
