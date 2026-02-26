@@ -10,6 +10,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2WLQJF41KF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2WLQJF41KF');
+</script>
+<script>
+  document.getElementById("appstore-btn").addEventListener("click", function() {
+    gtag("event", "appstore_click", {
+      event_category: "engagement",
+      event_label: "App Store Button"
+    });
+  });
+</script>
 </head>
 <body>
   <header class="site-header">
@@ -18,7 +35,7 @@
       <span class="brand-name">Bucketly</span>
     </a>
 
-    <a href="https://apps.apple.com/us/app/bucket-list-goals-bucketly/id6755809248" class="app-store-link" aria-label="Download Bucketly on the App Store">
+    <a href="https://apps.apple.com/us/app/bucket-list-goals-bucketly/id6755809248" class="app-store-link" aria-label="Download Bucketly on the App Store" id="appstore-btn">
       <img src="assets/download-on-the-app-store-apple-logo-svgrepo-com.svg" alt="Download on the App Store">
     </a>
   </header>
@@ -40,7 +57,7 @@
           Save your dreams, goals and bucket list adventure. Track places you want to visit and create memories you'll relive forever.
         </p>
 
-        <a href="https://apps.apple.com/us/app/bucket-list-goals-bucketly/id6755809248" class="hero-app-store-link" aria-label="Download Bucketly on the App Store">
+        <a href="https://apps.apple.com/us/app/bucket-list-goals-bucketly/id6755809248" class="hero-app-store-link" aria-label="Download Bucketly on the App Store" id="appstore-btn">
           <img src="assets/download-on-the-app-store-apple-logo-svgrepo-com.svg" alt="Download on the App Store">
         </a>
       </div>
@@ -298,7 +315,7 @@
           <h2 id="footer-brand-title">Bucketly</h2>
         </div>
         <p class="footer-tagline">Live your dreams</p>
-        <a href="https://apps.apple.com/us/app/bucket-list-goals-bucketly/id6755809248" class="footer-app-store-link" aria-label="Download Bucketly on the App Store">
+        <a href="https://apps.apple.com/us/app/bucket-list-goals-bucketly/id6755809248" class="footer-app-store-link" aria-label="Download Bucketly on the App Store" id="appstore-btn">
           <img src="assets/download-on-the-app-store-apple-logo-svgrepo-com.svg" alt="Download on the App Store">
         </a>
         <p class="footer-copyright">© 2026 Bucketly. All rights reserved.</p>
