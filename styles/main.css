@@ -89,7 +89,7 @@ main {
   border: none;
   background:
     linear-gradient(130deg, rgba(239, 248, 255, 0.62), rgba(232, 244, 255, 0.42)),
-    url("../assets/clouds.jpg") center/cover no-repeat;
+    url("../assets/clouds-1600.jpg") center/cover no-repeat;
   box-shadow: none;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -261,7 +261,9 @@ main {
   --shot-reveal-delay: 0ms;
   position: absolute;
   top: 50%;
-  width: clamp(230px, 28vw, 340px);
+  width: clamp(210px, 24vw, 300px);
+  height: auto;
+  max-width: 100%;
   border-radius: 0;
   border: none;
   box-shadow: none;
@@ -825,6 +827,9 @@ main {
     margin-top: 0;
     border-radius: 0;
     overflow: visible;
+    background:
+      linear-gradient(130deg, rgba(239, 248, 255, 0.62), rgba(232, 244, 255, 0.42)),
+      url("../assets/clouds-960.jpg") center/cover no-repeat;
     padding: 5.4rem 1rem 4.2rem;
     gap: 1.45rem;
     grid-template-columns: 1fr;
